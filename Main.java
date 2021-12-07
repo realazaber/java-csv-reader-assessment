@@ -9,18 +9,26 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+	
+		//Filepath
 		String filePath = "records.csv";
 		
-		
+			
 		try {
+			//Reader.
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+			
+			//Variable for temporarily storing each line.
 			String line = "";
 			
+			//Loop over each line if the line is not null.
 			while ((line = reader.readLine()) != null) {
-				
+				System.out.println(line);
 			}
 			
 		} 
+		
+		//Handle Exceptions.
 		catch (FileNotFoundException e) {
 			System.out.println("Invalid file path: " + filePath);
 		}
